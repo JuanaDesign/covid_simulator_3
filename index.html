@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Simulador3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <style>
+        body {
+			widht: 100%;
+			height: 100%;
+		}
+		
+		
+        .main-wrapper {
+          position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+          width: 600px;
+          height: 600px;
+          border: 1px solid black;
+		  
+		  
+		}
+		
+		.main-wrapper h1 {
+			position: absolute;
+			bottom: 200px;
+			left: 630px;
+			width: 400px;
+			font-family: 'Lato', sans-serif;
+		}
+		
+		.main-wrapper p {
+			position: absolute;
+			left: 630px;
+			top: 370px;
+			width: 300px;
+			font-family: 'Lato', sans-serif;
+			font-size:15px
+		}
+		
+        .dot {
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          background-color: black;
+          border-radius: 40px;
+          transition: 1s all ease-out;
+          border: 4px solid green;
+        }
+
+
+		
+        #dot1 {
+          bottom: 285px;
+          left: 50px;
+        }
+		
+	    #dot2 {
+          bottom: 285px;
+          left: 150px;
+        }
+       
+	    #dot3 {
+          bottom: 220px;
+          left: 150px;
+        }
+
+  	    #dot4 {
+          bottom: 350px;
+          left: 150px;
+        }      
+
+	    #dot5 {
+          bottom: 220px;
+          left: 250px;
+        }
+
+  	    #dot6 {
+          bottom: 350px;
+          left: 250px;
+        }    
+		
+	    #dot7 {
+          bottom: 285px;
+          left: 250px;
+        }
+	    #dot8 {
+          bottom: 415px;
+          left: 250px;
+        }    
+		
+	    #dot9 {
+          bottom: 90px;
+          left: 250px;
+        }
+		
+		#dot10 {
+          bottom: 155px;
+          left: 250px;
+        }
+        
+		
+		
+		
+	    #dot11 {
+          bottom: 200px;
+          left: 350px;
+        }
+
+  	    #dot12 {
+          bottom: 330px;
+          left: 350px;
+        }    
+		
+	    #dot13 {
+          bottom: 265px;
+          left: 350px;
+        }
+	    #dot14 {
+          bottom: 395px;
+          left: 350px;
+        }    
+		
+	    #dot15 {
+          bottom: 70px;
+          left: 350px;
+        }
+		
+		#dot16 {
+          bottom: 135px;
+          left: 350px;
+        }
+        
+	    #dot17 {
+          bottom: 5px;
+          left: 350px;
+        }	
+				
+		#dot18 {
+          bottom: 460px;
+          left: 350px;
+        }
+		
+		#dot19 {
+          bottom: 525px;
+          left: 350px;
+        }
+
+		
+		
+		#dot20 {
+          bottom: 200px;
+          left: 450px;
+        }
+
+  	    #dot21 {
+          bottom: 330px;
+          left: 450px;
+        }    
+		
+	    #dot22 {
+          bottom: 265px;
+          left: 450px;
+        }
+	    #dot23 {
+          bottom: 395px;
+          left: 450px;
+        }    
+		
+	    #dot24 {
+          bottom: 70px;
+          left: 450px;
+        }
+		
+		#dot25 {
+          bottom: 135px;
+          left: 450px;
+        }
+        
+	    #dot26 {
+          bottom: 5px;
+          left: 450px;
+        }	
+				
+		#dot27 {
+          bottom: 460px;
+          left: 450px;
+        }
+		
+		#dot28 {
+          bottom: 525px;
+          left: 450px;
+        }	
+		
+		
+		
+		
+		
+		
+        #dot1.centered {
+          transform: translate(50px, 0px);
+        }
+        
+		
+		
+		#dot2.centered2 {
+          transform: translate(50px, 0px);
+        }
+        #dot3.centered2 {
+          transform: translate(50px, 0px);
+        }
+        #dot4.centered2 {
+          transform: translate(50px, 0px);
+        }
+		
+		
+		
+	    #dot5.derecha {
+          transform: translate(50px, 0px);
+        }
+        #dot6.derecha {
+          transform: translate(50px, 0px);
+        }	
+        #dot7.derecha {
+          transform: translate(50px, 0px);
+        }		
+		#dot8.derecha {
+          transform: translate(50px, 0px);
+        }
+        #dot9.derecha {
+          transform: translate(50px, 0px);
+        }	
+        #dot10.derecha {
+          transform: translate(50px, 0px);
+        }		
+		
+		
+		
+	    #dot11.derecha2 {
+          transform: translate(50px, 0px);
+        }
+        #dot12.derecha2 {
+          transform: translate(50px, 0px);
+        }	
+        #dot13.derecha2 {
+          transform: translate(50px, 0px);
+        }		
+		#dot14.derecha2 {
+          transform: translate(50px, 0px);
+        }
+        #dot15.derecha2 {
+          transform: translate(50px, 0px);
+        }	
+        #dot16.derecha2 {
+          transform: translate(50px, 0px);
+        }	
+		#dot17.derecha2 {
+          transform: translate(50px, 0px);
+        }
+        #dot18.derecha2 {
+          transform: translate(50px, 0px);
+        }	
+        #dot19.derecha2 {
+          transform: translate(50px, 0px);
+        }	
+		
+		
+		
+		
+		#dot20.derecha3 {
+          transform: translate(50px, 0px);
+        }
+        #dot21.derecha3 {
+          transform: translate(50px, 0px);
+        }	
+        #dot22.derecha3 {
+          transform: translate(50px, 0px);
+        }		
+		#dot23.derecha3 {
+          transform: translate(50px, 0px);
+        }
+        #dot24.derecha3 {
+          transform: translate(50px, 0px);
+        }	
+        #dot25.derecha3 {
+          transform: translate(50px, 0px);
+        }	
+		#dot26.derecha3 {
+          transform: translate(50px, 0px);
+        }
+        #dot27.derecha3 {
+          transform: translate(50px, 0px);
+        }	
+        #dot28.derecha3 {
+          transform: translate(50px, 0px);
+        }	
+		
+		
+       
+        .dot.red-border {
+          border: 4px solid red;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="main-wrapper">
+        
+        <div id="dot1" class="dot"></div>
+        
+        <div id="dot2" class="dot"></div>
+        <div id="dot3" class="dot"></div>
+        <div id="dot4" class="dot"></div>
+        
+        <div id="dot5" class="dot"></div>
+        <div id="dot6" class="dot"></div>
+        <div id="dot7" class="dot"></div>
+        <div id="dot8" class="dot"></div>
+        <div id="dot9" class="dot"></div>
+        <div id="dot10" class="dot"></div> 
+        
+        <div id="dot11" class="dot"></div>
+        <div id="dot12" class="dot"></div>
+        <div id="dot13" class="dot"></div>
+        <div id="dot14" class="dot"></div>
+        <div id="dot15" class="dot"></div>
+        <div id="dot16" class="dot"></div>
+        <div id="dot17" class="dot"></div>
+        <div id="dot18" class="dot"></div>
+        <div id="dot19" class="dot"></div> 
+        
+        <div id="dot20" class="dot"></div>
+        <div id="dot21" class="dot"></div>
+        <div id="dot22" class="dot"></div>
+        <div id="dot23" class="dot"></div>
+        <div id="dot24" class="dot"></div>
+        <div id="dot25" class="dot"></div>
+        <div id="dot26" class="dot"></div>
+        <div id="dot27" class="dot"></div>
+        <div id="dot28" class="dot"></div>       
+        
+        <h1 style="color:red; font-size:20px">OBJETIVOS</h1>
+    	<p> <br> Concienciar sobre la importancia de mantener la distancia de seguridad entre los individuos.<br> 
+<br> Facilidad de comprensión para el usuario.<br> 
+<br> Simuladores simples y esquemáticos.<br> </p>   
+    </div>
+
+    <script>
+
+
+      makeAnimation();
+      
+      function makeAnimation() {
+        setTimeout(addCenteredClass, 500);
+		setTimeout(addCentered2Class, 1000);
+		
+		setTimeout(addDerechaClass, 1500);
+		setTimeout(addDerecha2Class, 2000);
+		setTimeout(addDerecha3Class, 2500);
+        
+		setTimeout(changeBorderColor, 200);
+		setTimeout(changeBorder2Color, 1000);
+		setTimeout(changeBorder3Color, 1500);
+		setTimeout(changeBorder4Color, 2000);
+		setTimeout(changeBorder5Color, 2500);
+      }
+
+
+
+      function addCenteredClass() {
+        dot1.classList.add("centered");
+      }
+	  
+	   function addCentered2Class() {
+		dot2.classList.add("centered2");
+		dot3.classList.add("centered2");
+		dot4.classList.add("centered2");
+      }
+	  
+	  function addDerechaClass() {
+        dot5.classList.add("derecha");
+        dot6.classList.add("derecha");
+        dot7.classList.add("derecha");	
+	    dot8.classList.add("derecha");
+        dot9.classList.add("derecha");
+        dot10.classList.add("derecha");		
+      }
+
+	  function addDerecha2Class() {
+        dot11.classList.add("derecha2");
+        dot12.classList.add("derecha2");
+        dot13.classList.add("derecha2");	
+	    dot14.classList.add("derecha2");
+        dot15.classList.add("derecha2");
+        dot16.classList.add("derecha2");
+	    dot17.classList.add("derecha2");
+        dot18.classList.add("derecha2");
+        dot19.classList.add("derecha2");				
+      }
+
+	  function addDerecha3Class() {
+        dot20.classList.add("derecha3");
+        dot21.classList.add("derecha3");
+        dot22.classList.add("derecha3");	
+	    dot23.classList.add("derecha3");
+        dot24.classList.add("derecha3");
+        dot25.classList.add("derecha3");
+	    dot26.classList.add("derecha3");
+        dot27.classList.add("derecha3");
+        dot28.classList.add("derecha3");				
+        }
+
+
+
+        function changeBorderColor() {
+        dot1.classList.add("red-border");
+		}
+
+		function changeBorder2Color() {
+		dot2.classList.add("red-border");
+		dot3.classList.add("red-border");
+		dot4.classList.add("red-border");
+		}
+		
+		function changeBorder3Color() {
+		dot5.classList.add("red-border");	
+		dot6.classList.add("red-border");
+		dot7.classList.add("red-border");
+		dot8.classList.add("red-border");
+		dot9.classList.add("red-border");
+		dot10.classList.add("red-border");
+		}
+		
+		function changeBorder4Color() {
+		dot11.classList.add("red-border");
+		dot12.classList.add("red-border");
+		dot13.classList.add("red-border");
+		dot14.classList.add("red-border");
+		dot15.classList.add("red-border");	
+		dot16.classList.add("red-border");
+		dot17.classList.add("red-border");
+		dot18.classList.add("red-border");
+		dot19.classList.add("red-border");
+		}
+		
+		function changeBorder5Color() {
+		dot20.classList.add("red-border");	
+		dot21.classList.add("red-border");
+		dot22.classList.add("red-border");
+		dot23.classList.add("red-border");
+		dot24.classList.add("red-border");
+		dot25.classList.add("red-border");	
+		dot26.classList.add("red-border");
+		dot27.classList.add("red-border");
+		dot28.classList.add("red-border");		
+		}
+      
+    </script>
+  </body>
+</html>
